@@ -63,7 +63,7 @@ def query_site(url, target, offset):
         print "See Intructor notes for information"
         return False
     params = {"api-key": API_KEY[target], "offset": offset}
-    r = requests.get(url, params = params)
+    (url, params = params)
 
     if r.status_code == requests.codes.ok:
         return r.json()
